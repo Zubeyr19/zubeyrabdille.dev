@@ -241,7 +241,7 @@ const translations = {
       label: 'Skills',
       sub: 'Technologies I work with, grouped by where I spend most of my time.',
       groups: [
-        { name: 'Backend', skills: ['Java', 'Spring Boot', 'PHP', 'Laravel', 'Python', 'REST APIs'] },
+        { name: 'Backend', skills: ['Java', 'Spring Boot', 'PHP', 'Laravel', 'Python', 'C#', 'Rust', 'REST APIs'] },
         { name: 'Frontend', skills: ['TypeScript', 'JavaScript', 'Vue.js', 'Nuxt', 'HTML / CSS'] },
         { name: 'Cloud & DevOps', skills: ['Docker', 'AWS S3', 'GitLab CI/CD', 'Linux'] },
         { name: 'Databases', skills: ['MySQL', 'PostgreSQL', 'Elasticsearch'] },
@@ -366,7 +366,7 @@ const translations = {
       label: 'Kompetencer',
       sub: 'Teknologier jeg arbejder med, gruperet efter hvor jeg bruger mest tid.',
       groups: [
-        { name: 'Backend', skills: ['Java', 'Spring Boot', 'PHP', 'Laravel', 'Python', 'REST API\'er'] },
+        { name: 'Backend', skills: ['Java', 'Spring Boot', 'PHP', 'Laravel', 'Python', 'C#', 'Rust', 'REST API\'er'] },
         { name: 'Frontend', skills: ['TypeScript', 'JavaScript', 'Vue.js', 'Nuxt', 'HTML / CSS'] },
         { name: 'Cloud & DevOps', skills: ['Docker', 'AWS S3', 'GitLab CI/CD', 'Linux'] },
         { name: 'Databaser', skills: ['MySQL', 'PostgreSQL', 'Elasticsearch'] },
