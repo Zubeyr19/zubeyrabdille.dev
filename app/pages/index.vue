@@ -12,7 +12,7 @@
         <p class="hero-bio">{{ t.hero.bio }}</p>
         <p class="hero-status">
           <span class="status-dot"></span>
-          Denmark &nbsp;&bull;&nbsp; <span class="status-text">{{ t.hero.status }}</span>
+          {{ t.hero.location }} &nbsp;&bull;&nbsp; <span class="status-text">{{ t.hero.status }}</span>
         </p>
         <div class="hero-links">
           <a href="/Zubeyr_CV.pdf" target="_blank" class="btn-primary">{{ t.hero.downloadCv }}</a>
@@ -141,7 +141,8 @@ const translations = {
   en: {
     hero: {
       title: 'Software Engineer',
-      bio: 'Backend and fullstack developer with production experience in Java, PHP, Python and TypeScript. Built real-world systems from IoT data platforms to AI chatbots, and delivered client-facing web solutions. Open to backend, fullstack and web developer roles across all of Denmark.',
+      location: 'Kolding, Denmark',
+      bio: 'Backend and fullstack developer with production experience in Java, PHP, Python and TypeScript. Built real-world systems from IoT data platforms to AI chatbots, and delivered client-facing web solutions. Open to backend, fullstack, web developer and cloud roles across all of Denmark.',
       status: 'Open to opportunities',
       downloadCv: 'Download CV',
       contactMe: 'Contact me',
@@ -164,7 +165,7 @@ const translations = {
             'Developed PoC software solutions and modern UI/UX frontends for clients.',
             'Direct client contact from initial dialogue through requirements specification to delivery.',
           ],
-          tags: ['JavaScript', 'Frontend', 'Client work'],
+          tags: ['JavaScript', 'Rust', 'Frontend', 'Client work'],
         },
         {
           role: 'Software Developer – Bachelor Thesis',
@@ -255,7 +256,7 @@ const translations = {
     },
     contact: {
       heading: 'Get in touch',
-      sub: 'Open to backend, fullstack and web developer roles across all of Denmark.',
+      sub: 'Open to backend, fullstack, web developer and cloud roles across all of Denmark.',
     },
     footer: {
       source: 'Source code on GitHub',
@@ -265,7 +266,8 @@ const translations = {
   da: {
     hero: {
       title: 'Softwareingeniør',
-      bio: 'Backend- og fullstack-udvikler med produktionserfaring i Java, PHP, Python og TypeScript. Har bygget systemer fra IoT-dataplatforme til AI-chatbots og leveret kundevendte webløsninger. Åben for backend-, fullstack- og webjobs i hele Danmark.',
+      location: 'Kolding, Danmark',
+      bio: 'Backend- og fullstack-udvikler med produktionserfaring i Java, PHP, Python og TypeScript. Har bygget systemer fra IoT-dataplatforme til AI-chatbots og leveret kundevendte webløsninger. Åben for backend-, fullstack-, web- og cloud-stillinger i hele Danmark.',
       status: 'Åben for muligheder',
       downloadCv: 'Hent CV',
       contactMe: 'Kontakt mig',
@@ -288,7 +290,7 @@ const translations = {
             'Udviklede PoC-softwareløsninger og moderne UI/UX-frontends til kunder.',
             'Direkte kundekontakt fra første dialog over kravspecifikation til levering.',
           ],
-          tags: ['JavaScript', 'Frontend', 'Kundeprojekter'],
+          tags: ['JavaScript', 'Rust', 'Frontend', 'Kundeprojekter'],
         },
         {
           role: 'Softwareudvikler – Bachelorprojekt',
@@ -379,7 +381,7 @@ const translations = {
     },
     contact: {
       heading: 'Tag fat i mig',
-      sub: 'Åben for backend-, fullstack- og webstillinger i hele Danmark.',
+      sub: 'Åben for backend-, fullstack-, web- og cloud-stillinger i hele Danmark.',
     },
     footer: {
       source: 'Kildekode på GitHub',
