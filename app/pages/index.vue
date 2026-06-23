@@ -116,7 +116,7 @@
         <p>{{ t.contact.sub }}</p>
         <div class="contact-links">
           <a href="mailto:zubeyrabdille@gmail.com">zubeyrabdille@gmail.com</a>
-          <a href="https://www.linkedin.com/in/zubeyrabdille-6b8665311/" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/zubeyr-abdille-6b8665311/" target="_blank">LinkedIn</a>
           <a href="https://github.com/Zubeyr19" target="_blank">GitHub</a>
         </div>
       </div>
