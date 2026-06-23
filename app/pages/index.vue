@@ -423,7 +423,7 @@ const t = computed(() => translations[lang.value])
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 15%;
   border-radius: 50%;
 }
 
