@@ -406,8 +406,8 @@ const t = computed(() => translations[lang.value])
 }
 
 .avatar {
-  width: 220px;
-  height: 220px;
+  width: 290px;
+  height: 250px;
   border-radius: 50%;
   border: 2px solid var(--accent);
   margin-bottom: 24px;
@@ -423,7 +423,7 @@ const t = computed(() => translations[lang.value])
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center 28%;
   border-radius: 50%;
 }
 
