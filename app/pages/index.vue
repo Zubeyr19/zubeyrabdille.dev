@@ -5,8 +5,7 @@
     <section class="hero">
       <div class="container hero-container">
         <div class="avatar">
-          <img src="/avatar.jpg" alt="Zubeyr Abdille" @error="($event.target as HTMLImageElement).style.display='none'" />
-          <span class="avatar-fallback">ZA</span>
+          <img src="/avatar.jpg" alt="Zubeyr Abdille" />
         </div>
         <h1>Zubeyr Abdille</h1>
         <p class="hero-title">{{ t.hero.title }}</p>
@@ -422,15 +421,8 @@ const t = computed(() => translations[lang.value])
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   border-radius: 50%;
-}
-
-.avatar-fallback {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.05em;
-  position: absolute;
 }
 
 .hero h1 {
