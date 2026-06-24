@@ -231,13 +231,20 @@ const translations = {
           desc: 'Event-driven pipeline in PHP and Laravel managing sensor configuration data against AWS S3. Integrity validation, retention management and continuous operation against live sensor data streams.',
           tags: ['PHP', 'Laravel', 'AWS S3', 'MySQL'],
         },
+        {
+          type: 'CLIENT PROJECT · RUST',
+          headerClass: 'header-rust',
+          title: 'Rust Web Crawler',
+          desc: 'Async web crawler built in Rust for an auction listing platform. Crawls and indexes auction data to bring search query response times down to under 0.7 seconds.',
+          tags: ['Rust', 'Async', 'Web Crawling', 'Search Optimization'],
+        },
       ],
     },
     skills: {
       label: 'Skills',
       sub: 'Technologies I work with, grouped by where I spend most of my time.',
       groups: [
-        { name: 'Backend', skills: ['Java', 'Spring Boot', 'PHP', 'Laravel', 'Python', 'C#', 'Rust', 'REST APIs'] },
+        { name: 'Backend', skills: ['Java', 'PHP', 'C#', 'Python', 'Rust', 'REST APIs'] },
         { name: 'Frontend', skills: ['TypeScript', 'JavaScript', 'Vue.js', 'Nuxt', 'HTML / CSS'] },
         { name: 'Cloud & DevOps', skills: ['Docker', 'AWS S3', 'Azure', 'GitLab CI/CD', 'Linux'] },
         { name: 'Databases', skills: ['MySQL', 'PostgreSQL', 'Elasticsearch'] },
@@ -349,13 +356,20 @@ const translations = {
           desc: 'Event-drevet pipeline i PHP og Laravel til håndtering af sensorkonfigurationsdata mod AWS S3. Integritetssikring, retentionsstyring og kontinuerlig drift mod levende sensordatastrømme.',
           tags: ['PHP', 'Laravel', 'AWS S3', 'MySQL'],
         },
+        {
+          type: 'KUNDEPROJEKT · RUST',
+          headerClass: 'header-rust',
+          title: 'Rust Web Crawler',
+          desc: 'Asynkron web crawler bygget i Rust til en auktionslisteplatform. Crawler og indekserer auktionsdata for at bringe søgeforespørgsler ned under 0,7 sekunder.',
+          tags: ['Rust', 'Async', 'Web Crawling', 'Søgeoptimering'],
+        },
       ],
     },
     skills: {
       label: 'Kompetencer',
       sub: 'Teknologier jeg arbejder med, gruperet efter hvor jeg bruger mest tid.',
       groups: [
-        { name: 'Backend', skills: ['Java', 'Spring Boot', 'PHP', 'Laravel', 'Python', 'C#', 'Rust', 'REST API\'er'] },
+        { name: 'Backend', skills: ['Java', 'PHP', 'C#', 'Python', 'Rust', 'REST API\'er'] },
         { name: 'Frontend', skills: ['TypeScript', 'JavaScript', 'Vue.js', 'Nuxt', 'HTML / CSS'] },
         { name: 'Cloud & DevOps', skills: ['Docker', 'AWS S3', 'Azure', 'GitLab CI/CD', 'Linux'] },
         { name: 'Databaser', skills: ['MySQL', 'PostgreSQL', 'Elasticsearch'] },
@@ -671,6 +685,7 @@ const t = computed(() => translations[lang.value])
 .header-iot      { background: linear-gradient(135deg, #071f1f 0%, #0d3030 100%); }
 .header-ai       { background: linear-gradient(135deg, #130a1f 0%, #1e0a2e 100%); }
 .header-pipeline { background: linear-gradient(135deg, #071219 0%, #0a1e0d 100%); }
+.header-rust     { background: linear-gradient(135deg, #1a0d00 0%, #2e1500 100%); }
 
 .project-type {
   font-size: 0.68rem;
