@@ -176,7 +176,7 @@ const translations = {
           location: 'Odense, Denmark',
           industry: 'Startup · Client software',
           accentColor: '#f59e0b',
-          dotColor: '#22c55e',
+          dotColor: '#f59e0b',
           badge: 'Current',
           logo: '/buildsom-logo.png',
           logoChar: 'B',
@@ -195,11 +195,10 @@ const translations = {
           date: '2025 — 2026',
           location: 'Fredericia, Denmark',
           industry: 'Industrial IoT · SaaS',
-          accentColor: '#818cf8',
-          dotColor: '#818cf8',
+          accentColor: '#2d3f5e',
+          dotColor: '#2d3f5e',
           badge: null,
           logo: '/vemcogroup-logo.png',
-          logoWhiteBg: true,
           logoChar: 'V',
           logoClass: 'logo-v',
           bullets: [
@@ -335,11 +334,10 @@ const translations = {
           date: '2025 — 2026',
           location: 'Fredericia, Danmark',
           industry: 'Industriel IoT · SaaS',
-          accentColor: '#818cf8',
-          dotColor: '#818cf8',
+          accentColor: '#2d3f5e',
+          dotColor: '#2d3f5e',
           badge: null,
           logo: '/vemcogroup-logo.png',
-          logoWhiteBg: true,
           logoChar: 'V',
           logoClass: 'logo-v',
           bullets: [
@@ -653,7 +651,7 @@ const t = computed(() => translations[lang.value])
 }
 
 .logo-b { background: rgba(74, 222, 128, 0.08); color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.2); }
-.logo-v { background: rgba(129, 140, 248, 0.08); color: #818cf8; border: 1px solid rgba(129, 140, 248, 0.2); }
+.logo-v { background: rgba(45, 63, 94, 0.12); color: #2d3f5e; border: 1px solid rgba(45, 63, 94, 0.3); }
 .logo-s { background: rgba(251, 146, 60, 0.08); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.2); }
 
 .exp-logo-img {
