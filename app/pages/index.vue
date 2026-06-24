@@ -35,7 +35,7 @@
         <p class="section-label">{{ t.experience.label }}</p>
         <div class="exp-list">
           <div v-for="job in t.experience.jobs" :key="job.role" class="exp-card">
-            <div v-if="job.logo" class="exp-logo-img">
+            <div v-if="job.logo" class="exp-logo-img" :class="{ 'logo-white-bg': job.logoWhiteBg }">
               <img :src="job.logo" :alt="job.company" />
             </div>
             <div v-else class="exp-logo" :class="job.logoClass">{{ job.logoChar }}</div>
@@ -162,6 +162,7 @@ const translations = {
           company: 'BuildSOM I/S',
           meta: '2026 · Odense, Denmark · Startup',
           badge: 'Current',
+          logo: '/buildsom-logo.png',
           logoChar: 'B',
           logoClass: 'logo-b',
           bullets: [
@@ -176,6 +177,7 @@ const translations = {
           meta: '2025 – 2026 · Fredericia, Denmark · Industrial IoT',
           badge: null,
           logo: '/vemcogroup-logo.png',
+          logoWhiteBg: true,
           logoChar: 'V',
           logoClass: 'logo-v',
           bullets: [
@@ -191,6 +193,7 @@ const translations = {
           meta: '2025 · Fredericia, Denmark · Industrial IoT',
           badge: null,
           logo: '/vemcogroup-logo.png',
+          logoWhiteBg: true,
           logoChar: 'V',
           logoClass: 'logo-v',
           bullets: [
@@ -289,6 +292,7 @@ const translations = {
           company: 'BuildSOM I/S',
           meta: '2026 · Odense, Danmark · Startup',
           badge: 'Nuværende',
+          logo: '/buildsom-logo.png',
           logoChar: 'B',
           logoClass: 'logo-b',
           bullets: [
@@ -303,6 +307,7 @@ const translations = {
           meta: '2025 – 2026 · Fredericia, Danmark · Industriel IoT',
           badge: null,
           logo: '/vemcogroup-logo.png',
+          logoWhiteBg: true,
           logoChar: 'V',
           logoClass: 'logo-v',
           bullets: [
@@ -318,6 +323,7 @@ const translations = {
           meta: '2025 · Fredericia, Danmark · Industriel IoT',
           badge: null,
           logo: '/vemcogroup-logo.png',
+          logoWhiteBg: true,
           logoChar: 'V',
           logoClass: 'logo-v',
           bullets: [
@@ -591,9 +597,11 @@ const t = computed(() => translations[lang.value])
   justify-content: center;
   border-radius: 10px;
   overflow: hidden;
+  box-sizing: border-box;
+}
+.exp-logo-img.logo-white-bg {
   background: #fff;
   padding: 6px;
-  box-sizing: border-box;
 }
 .exp-logo-img img {
   width: 100%;
