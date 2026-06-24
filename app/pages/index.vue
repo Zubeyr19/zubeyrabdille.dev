@@ -35,7 +35,10 @@
         <p class="section-label">{{ t.experience.label }}</p>
         <div class="exp-list">
           <div v-for="job in t.experience.jobs" :key="job.role" class="exp-card">
-            <div class="exp-logo" :class="job.logoClass">{{ job.logoChar }}</div>
+            <div v-if="job.logo" class="exp-logo-img">
+              <img :src="job.logo" :alt="job.company" />
+            </div>
+            <div v-else class="exp-logo" :class="job.logoClass">{{ job.logoChar }}</div>
             <div class="exp-body">
               <div class="exp-header">
                 <div>
@@ -172,6 +175,7 @@ const translations = {
           company: 'VemcoGroup',
           meta: '2025 – 2026 · Fredericia, Denmark · Industrial IoT',
           badge: null,
+          logo: '/vemcogroup-logo.png',
           logoChar: 'V',
           logoClass: 'logo-v',
           bullets: [
@@ -186,6 +190,7 @@ const translations = {
           company: 'VemcoGroup',
           meta: '2025 · Fredericia, Denmark · Industrial IoT',
           badge: null,
+          logo: '/vemcogroup-logo.png',
           logoChar: 'V',
           logoClass: 'logo-v',
           bullets: [
@@ -297,6 +302,7 @@ const translations = {
           company: 'VemcoGroup',
           meta: '2025 – 2026 · Fredericia, Danmark · Industriel IoT',
           badge: null,
+          logo: '/vemcogroup-logo.png',
           logoChar: 'V',
           logoClass: 'logo-v',
           bullets: [
@@ -311,6 +317,7 @@ const translations = {
           company: 'VemcoGroup',
           meta: '2025 · Fredericia, Danmark · Industriel IoT',
           badge: null,
+          logo: '/vemcogroup-logo.png',
           logoChar: 'V',
           logoClass: 'logo-v',
           bullets: [
@@ -574,6 +581,25 @@ const t = computed(() => translations[lang.value])
 .logo-b { background: rgba(74, 222, 128, 0.08); color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.2); }
 .logo-v { background: rgba(129, 140, 248, 0.08); color: #818cf8; border: 1px solid rgba(129, 140, 248, 0.2); }
 .logo-s { background: rgba(251, 146, 60, 0.08); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.2); }
+
+.exp-logo-img {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  padding: 6px;
+  box-sizing: border-box;
+}
+.exp-logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 .exp-header {
   display: flex;
