@@ -208,6 +208,8 @@ const translations = {
           company: 'SDU – University of Southern Denmark',
           meta: '2023 – 2024 · Odense, Denmark · University',
           badge: null,
+          logo: '/sdu-logo.png',
+          logoWhiteBg: true,
           logoChar: 'S',
           logoClass: 'logo-s',
           bullets: [
@@ -338,6 +340,8 @@ const translations = {
           company: 'SDU – Syddansk Universitet',
           meta: '2023 – 2024 · Odense, Danmark · Universitet',
           badge: null,
+          logo: '/sdu-logo.png',
+          logoWhiteBg: true,
           logoChar: 'S',
           logoClass: 'logo-s',
           bullets: [
