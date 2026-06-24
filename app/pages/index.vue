@@ -620,8 +620,8 @@ const t = computed(() => translations[lang.value])
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-left-width: 3px;
-  border-radius: 10px;
-  padding: 20px 22px;
+  border-radius: 12px;
+  padding: 26px 28px;
   transition: background 0.3s;
 }
 
@@ -639,14 +639,14 @@ const t = computed(() => translations[lang.value])
 }
 
 .exp-logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
+  width: 80px;
+  height: 52px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
   flex-shrink: 0;
 }
 
@@ -655,42 +655,42 @@ const t = computed(() => translations[lang.value])
 .logo-s { background: rgba(251, 146, 60, 0.08); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.2); }
 
 .exp-logo-img {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 52px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   box-sizing: border-box;
 }
 .exp-logo-img.logo-white-bg {
   background: #fff;
-  padding: 4px;
+  padding: 5px;
 }
 .exp-logo-img img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .exp-company {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text);
 }
 
 .exp-role {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-muted);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .exp-meta-row {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
   margin-bottom: 4px;
 }
@@ -700,20 +700,20 @@ const t = computed(() => translations[lang.value])
   align-items: center;
   gap: 5px;
   color: var(--text-muted);
-  font-size: 0.76rem;
+  font-size: 0.8rem;
 }
 
 .exp-industry {
   color: var(--text-muted);
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   opacity: 0.6;
-  margin-bottom: 16px;
-  margin-top: 2px;
+  margin-bottom: 18px;
+  margin-top: 3px;
 }
 
 .badge-current {
-  font-size: 0.7rem;
-  padding: 3px 10px;
+  font-size: 0.72rem;
+  padding: 4px 12px;
   border-radius: 20px;
   background: rgba(34, 197, 94, 0.1);
   color: #22c55e;
@@ -724,16 +724,16 @@ const t = computed(() => translations[lang.value])
 
 .exp-bullets {
   list-style: none;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .exp-bullets li {
   color: var(--text-muted);
-  font-size: 0.875rem;
-  padding-left: 14px;
+  font-size: 0.92rem;
+  padding-left: 16px;
   position: relative;
-  margin-bottom: 6px;
-  line-height: 1.6;
+  margin-bottom: 8px;
+  line-height: 1.65;
 }
 
 .exp-bullets li::before {
