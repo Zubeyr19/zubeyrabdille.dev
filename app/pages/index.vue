@@ -168,6 +168,7 @@ const translations = {
           bullets: [
             'Developed PoC software solutions and modern UI/UX frontends for clients.',
             'Direct client contact from initial dialogue through requirements specification to delivery.',
+            'Built an async Rust web crawler for an auction listing platform, bringing search query response times down to under 0.7 seconds.',
           ],
           tags: ['JavaScript', 'Rust', 'Frontend', 'Client work'],
         },
@@ -199,6 +200,7 @@ const translations = {
           bullets: [
             'Built and maintained web applications as a student web developer at the university.',
             'Delivered web solutions using JavaScript and modern frontend tooling.',
+            'Deployed and managed applications on Azure using C# on the backend.',
           ],
           tags: ['C#', 'Azure', 'JavaScript', 'HTML / CSS', 'Web Development'],
         },
@@ -284,6 +286,7 @@ const translations = {
           bullets: [
             'Udviklede PoC-softwareløsninger og moderne UI/UX-frontends til kunder.',
             'Direkte kundekontakt fra første dialog over kravspecifikation til levering.',
+            'Byggede en asynkron Rust web crawler til en auktionslisteplatform, der bragte søgeforespørgsler ned under 0,7 sekunder.',
           ],
           tags: ['JavaScript', 'Rust', 'Frontend', 'Kundeprojekter'],
         },
@@ -315,6 +318,7 @@ const translations = {
           bullets: [
             'Byggede og vedligeholdt webapplikationer som studenter-webudvikler ved universitetet.',
             'Leverede webløsninger med JavaScript og moderne frontend-teknologier.',
+            'Deployerede og administrerede applikationer på Azure med C# på backend.',
           ],
           tags: ['C#', 'Azure', 'JavaScript', 'HTML / CSS', 'Webudvikling'],
         },
