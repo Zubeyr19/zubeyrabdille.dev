@@ -33,21 +33,32 @@
     <section id="experience">
       <div class="container">
         <p class="section-label">{{ t.experience.label }}</p>
-        <div class="exp-list">
-          <div v-for="job in t.experience.jobs" :key="job.role" class="exp-card">
-            <div v-if="job.logo" class="exp-logo-img" :class="{ 'logo-white-bg': job.logoWhiteBg }">
-              <img :src="job.logo" :alt="job.company" />
-            </div>
-            <div v-else class="exp-logo" :class="job.logoClass">{{ job.logoChar }}</div>
-            <div class="exp-body">
-              <div class="exp-header">
-                <div>
-                  <h3 class="exp-role">{{ job.role }}</h3>
+        <div class="exp-timeline">
+          <div v-for="job in t.experience.jobs" :key="job.role" class="exp-timeline-item">
+            <div class="exp-dot" :style="{ background: job.dotColor, boxShadow: `0 0 0 4px ${job.dotColor}25` }"></div>
+            <div class="exp-card" :style="{ borderLeftColor: job.accentColor }">
+              <div class="exp-card-top">
+                <div class="exp-logo-company">
+                  <div v-if="job.logo" class="exp-logo-img" :class="{ 'logo-white-bg': job.logoWhiteBg }">
+                    <img :src="job.logo" :alt="job.company" />
+                  </div>
+                  <div v-else class="exp-logo" :class="job.logoClass">{{ job.logoChar }}</div>
                   <span class="exp-company">{{ job.company }}</span>
                 </div>
                 <span v-if="job.badge" class="badge-current">{{ job.badge }}</span>
               </div>
-              <p class="exp-meta">{{ job.meta }}</p>
+              <h3 class="exp-role">{{ job.role }}</h3>
+              <div class="exp-meta-row">
+                <span class="exp-meta-item">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  {{ job.date }}
+                </span>
+                <span class="exp-meta-item">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  {{ job.location }}
+                </span>
+              </div>
+              <p class="exp-industry">{{ job.industry }}</p>
               <ul class="exp-bullets">
                 <li v-for="bullet in job.bullets" :key="bullet">{{ bullet }}</li>
               </ul>
@@ -146,7 +157,7 @@ const translations = {
       title: 'Software Engineer',
       location: 'Kolding, Denmark',
       bio: 'Backend and fullstack developer with production experience in Java, PHP, Python and TypeScript. Built real-world systems from IoT data platforms to AI chatbots, and delivered client-facing web solutions. Open to backend, fullstack, web developer and cloud roles across all of Denmark.',
-      status: 'Open to opportunities',
+      status: 'Available immediately',
       downloadCv: 'Download CV',
       contactMe: 'Contact me',
     },
@@ -161,6 +172,11 @@ const translations = {
           role: 'Fullstack Developer',
           company: 'BuildSOM I/S',
           meta: '2026 · Odense, Denmark · Startup',
+          date: '2026 — Present',
+          location: 'Odense, Denmark',
+          industry: 'Startup · Client software',
+          accentColor: '#f59e0b',
+          dotColor: '#22c55e',
           badge: 'Current',
           logo: '/buildsom-logo.png',
           logoChar: 'B',
@@ -173,9 +189,14 @@ const translations = {
           tags: ['JavaScript', 'Rust', 'Frontend', 'Client work'],
         },
         {
-          role: 'Software Developer – Internship',
+          role: 'Student Software Engineer / Intern',
           company: 'VemcoGroup',
           meta: '2025 · Fredericia, Denmark · Industrial IoT',
+          date: '2025 — 2026',
+          location: 'Fredericia, Denmark',
+          industry: 'Industrial IoT · SaaS',
+          accentColor: '#818cf8',
+          dotColor: '#818cf8',
           badge: null,
           logo: '/vemcogroup-logo.png',
           logoWhiteBg: true,
@@ -192,6 +213,11 @@ const translations = {
           role: 'Web Developer',
           company: 'Somalisk Studenterorganisation (SSO)',
           meta: '2023 – 2024 · Odense, Denmark · Student Organisation',
+          date: '2023 — 2024',
+          location: 'Odense, Denmark',
+          industry: 'Student Organisation',
+          accentColor: '#fb923c',
+          dotColor: '#fb923c',
           badge: null,
           logo: '/sso-logo.png',
           logoWhiteBg: true,
@@ -271,7 +297,7 @@ const translations = {
       title: 'Softwareingeniør',
       location: 'Kolding, Danmark',
       bio: 'Backend- og fullstack-udvikler med produktionserfaring i Java, PHP, Python og TypeScript. Har bygget systemer fra IoT-dataplatforme til AI-chatbots og leveret kundevendte webløsninger. Åben for backend-, fullstack-, web- og cloud-stillinger i hele Danmark.',
-      status: 'Åben for muligheder',
+      status: 'Tilgængelig med det samme',
       downloadCv: 'Hent CV',
       contactMe: 'Kontakt mig',
     },
@@ -286,6 +312,11 @@ const translations = {
           role: 'Fullstack-udvikler',
           company: 'BuildSOM I/S',
           meta: '2026 · Odense, Danmark · Startup',
+          date: '2026 — Nu',
+          location: 'Odense, Danmark',
+          industry: 'Startup · Kundesoftware',
+          accentColor: '#f59e0b',
+          dotColor: '#22c55e',
           badge: 'Nuværende',
           logo: '/buildsom-logo.png',
           logoChar: 'B',
@@ -298,9 +329,14 @@ const translations = {
           tags: ['JavaScript', 'Rust', 'Frontend', 'Kundeprojekter'],
         },
         {
-          role: 'Softwareudvikler – Praktik',
+          role: 'Softwareudvikler / Praktikant',
           company: 'VemcoGroup',
           meta: '2025 · Fredericia, Danmark · Industriel IoT',
+          date: '2025 — 2026',
+          location: 'Fredericia, Danmark',
+          industry: 'Industriel IoT · SaaS',
+          accentColor: '#818cf8',
+          dotColor: '#818cf8',
           badge: null,
           logo: '/vemcogroup-logo.png',
           logoWhiteBg: true,
@@ -317,6 +353,11 @@ const translations = {
           role: 'Webudvikler',
           company: 'Somalisk Studenterorganisation (SSO)',
           meta: '2023 – 2024 · Odense, Danmark · Studenterorganisation',
+          date: '2023 — 2024',
+          location: 'Odense, Danmark',
+          industry: 'Studenterorganisation',
+          accentColor: '#fb923c',
+          dotColor: '#fb923c',
           badge: null,
           logo: '/sso-logo.png',
           logoWhiteBg: true,
@@ -541,36 +582,73 @@ const t = computed(() => translations[lang.value])
 }
 
 /* EXPERIENCE */
-.exp-list {
+.exp-timeline {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  position: relative;
+  padding-left: 28px;
+}
+
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 16px;
+  bottom: 16px;
+  width: 1px;
+  background: var(--border);
+}
+
+.exp-timeline-item {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.exp-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.exp-dot {
+  position: absolute;
+  left: -23px;
+  top: 22px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .exp-card {
-  display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 18px;
   background: var(--bg-card);
   border: 1px solid var(--border);
+  border-left-width: 3px;
   border-radius: 10px;
-  padding: 22px;
-  transition: border-color 0.2s, background 0.3s;
+  padding: 20px 22px;
+  transition: background 0.3s;
 }
 
-.exp-card:hover {
-  border-color: #444;
+.exp-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.exp-logo-company {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .exp-logo {
-  width: 52px;
-  height: 52px;
-  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   flex-shrink: 0;
 }
 
@@ -579,19 +657,19 @@ const t = computed(() => translations[lang.value])
 .logo-s { background: rgba(251, 146, 60, 0.08); color: #fb923c; border: 1px solid rgba(251, 146, 60, 0.2); }
 
 .exp-logo-img {
-  width: 64px;
-  height: 64px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   box-sizing: border-box;
 }
 .exp-logo-img.logo-white-bg {
   background: #fff;
-  padding: 6px;
+  padding: 4px;
 }
 .exp-logo-img img {
   width: 100%;
@@ -599,29 +677,40 @@ const t = computed(() => translations[lang.value])
   object-fit: contain;
 }
 
-.exp-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 3px;
+.exp-company {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .exp-role {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.exp-company {
-  color: var(--accent);
-  font-size: 0.83rem;
-}
-
-.exp-meta {
+  font-size: 0.88rem;
+  font-weight: 500;
   color: var(--text-muted);
-  font-size: 0.78rem;
-  margin-bottom: 14px;
-  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.exp-meta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.exp-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+}
+
+.exp-industry {
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  opacity: 0.6;
+  margin-bottom: 16px;
+  margin-top: 2px;
 }
 
 .badge-current {
