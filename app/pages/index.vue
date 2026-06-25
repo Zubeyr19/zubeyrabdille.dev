@@ -155,7 +155,7 @@ const translations = {
   en: {
     hero: {
       title: 'Software Engineer',
-      location: 'Kolding, Denmark',
+      location: 'Odense, Denmark',
       bio: 'Backend and fullstack developer with production experience in Java, PHP, Python and TypeScript. Built real-world systems from IoT data platforms to AI chatbots, and delivered client-facing web solutions. Open to backend, fullstack, web developer and cloud roles across all of Denmark.',
       status: 'Available immediately',
       downloadCv: 'Download CV',
@@ -294,7 +294,7 @@ const translations = {
   da: {
     hero: {
       title: 'Softwareingeniør',
-      location: 'Kolding, Danmark',
+      location: 'Odense, Danmark',
       bio: 'Backend- og fullstack-udvikler med produktionserfaring i Java, PHP, Python og TypeScript. Har bygget systemer fra IoT-dataplatforme til AI-chatbots og leveret kundevendte webløsninger. Åben for backend-, fullstack-, web- og cloud-stillinger i hele Danmark.',
       status: 'Tilgængelig med det samme',
       downloadCv: 'Hent CV',
